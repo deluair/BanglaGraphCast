@@ -1,0 +1,26 @@
+{
+  "name": "bangla-graphcast",
+  "version": "1.0.0",
+  "description": "Specialized GraphCast implementation for Bangladesh weather prediction",
+  "main": "src/main.py",
+  "scripts": {
+    "dev": "python -m uvicorn operational.api.main:app --reload --host 0.0.0.0 --port 8000",
+    "train": "python training/train.py",
+    "evaluate": "python training/evaluate.py",
+    "preprocess": "python data/preprocessing/preprocess_all.py",
+    "download-data": "python scripts/download_data.py",
+    "test": "pytest tests/",
+    "lint": "flake8 src/ tests/",
+    "format": "black src/ tests/ && isort src/ tests/"
+  },
+  "keywords": ["weather", "forecasting", "bangladesh", "graphcast", "deep-learning"],
+  "author": "Bangladesh Weather Prediction Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bangladesh-weather/bangla-graphcast.git"
+  },
+  "engines": {
+    "python": ">=3.8"
+  }
+}
